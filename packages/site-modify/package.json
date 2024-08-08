@@ -1,0 +1,10 @@
+{
+  "name": "site-director",
+  "version": "1.0.0",
+  "author": "yanyue404",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yanyue404/build-my-own-extension"
+  }
+}

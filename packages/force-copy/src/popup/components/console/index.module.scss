@@ -1,0 +1,13 @@
+.console {
+  position: relative;
+  > div {
+    margin: 10px 5px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.switch {
+  display: flex;
+  justify-content: center;
+}

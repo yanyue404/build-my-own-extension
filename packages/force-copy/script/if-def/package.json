@@ -1,0 +1,32 @@
+{
+  "name": "if-def-processor",
+  "version": "1.0.3",
+  "files": [
+    "index.js",
+    "*.code-snippets"
+  ],
+  "main": "index.js",
+  "sideEffects": false,
+  "author": "yanyue404",
+  "license": "MIT",
+  "description": "Rspack/Webpack if-def predefined syntax loader",
+  "scripts": {
+    "publish:main": "npm publish --registry=https://registry.npmjs.org/",
+    "publish:test": "npm publish --registry=https://registry.npmjs.org/ --dry-run"
+  },
+  "bugs": {
+    "url": "https://github.com/yanyue404/build-my-own-extension/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yanyue404/build-my-own-extension"
+  },
+  "homepage": "https://github.com/yanyue404/build-my-own-extension",
+  "keywords": [
+    "if-def",
+    "rspack",
+    "loader"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}

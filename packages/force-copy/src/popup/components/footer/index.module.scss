@@ -1,0 +1,38 @@
+.footer {
+  padding: 3px 5px 0;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  justify-content: end;
+
+  > a,
+  div {
+    cursor: pointer;
+    color: var(--color-text-1);
+    margin-left: 7px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    > svg {
+      margin-right: 3px;
+    }
+  }
+
+  :global {
+    .arco-icon-question-circle,
+    .arco-icon-experiment,
+    .arco-icon-refresh {
+      font-size: 14px;
+    }
+
+    .arco-icon-question-circle,
+    .arco-icon-refresh {
+      margin-left: -2px;
+    }
+
+    .arco-icon-experiment {
+      margin-right: 2px;
+    }
+  }
+}
