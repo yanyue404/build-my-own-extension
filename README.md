@@ -17,5 +17,5 @@ $ pnpm run build:force-copy:gecko
 
 ## Thanks
 
-- https://github.com/yanyue404/build-my-own-extension
+- https://github.com/WindrunnerMax/TKScript
 - https://github.com/xcanwin/Unlimit-Web/
