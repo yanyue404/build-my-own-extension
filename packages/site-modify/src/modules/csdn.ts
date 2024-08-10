@@ -5,8 +5,8 @@ const website: Website = {
   init: function () {
     $(document).ready(function () {
       (function openCopy() {
-        const $$ = (Selector: string, el?: any): [HTMLElement] =>
-          (el || document).querySelectorAll(Selector);
+        const $$ = (Selector: string): NodeListOf<HTMLElement> =>
+          document.querySelectorAll(Selector);
         $$(
           "pre, code, div, p, span,a,i, strong,article, h1,h2,h3,h4,h5,h6, table, caption, tbody, tfoot, thead, tr, th, td"
         ).forEach(el => {

@@ -1,10 +1,16 @@
+// eslint-disable-next-line
+// @ts-nocheck
+
 import type { Website } from "../websites";
+
+declare let pathname: string; // 当前页面的路径
 
 //   gitlab 优化, 主页 master 分支需要 history 按钮
 const website: Website = {
   regexp: /gitlab/,
   init: function () {
     $(document).ready(function () {
+      // ts-ignore
       const allText = Array.from(Array.from($(".tree-controls .d-block"))[0].children).map(
         v => v.innerText
       );
