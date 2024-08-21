@@ -41,7 +41,7 @@ function mount(
   return vm;
 }
 
-function destroy(vm) {
+function destroy(vm: any) {
   vm.$el.remove();
   vm.$destroy();
 }
@@ -50,8 +50,8 @@ const website: Website = {
   regexp: /vuejs\.org/,
   init: function () {
     $(document).ready(function () {
-      // 加载elementUI样式表
-      loadCss("https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.14/theme-chalk/index.min.css");
+      // 加载elementUI样式表 https://unpkg.com/
+      loadCss("https://unpkg.com/element-ui@2.15.14/lib/theme-chalk/index.css");
 
       // 全局启用elementUI
       Vue.use(ElementUI);
@@ -75,7 +75,8 @@ const website: Website = {
         return Notification({
           title,
           message,
-          // ts-ignore
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
           type,
           duration,
           showClose,

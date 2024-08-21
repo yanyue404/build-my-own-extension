@@ -1,7 +1,5 @@
 import type { Website } from "../websites";
 
-declare const GM_addStyle: (css: string) => void; // 声明GM_addStyle函数
-
 const website: Website = {
   regexp: /chinadigitaltimes|golden-axe|yanyue404\.github|developer\.mozilla|vuejs\.org/,
   init: function () {

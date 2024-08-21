@@ -41,7 +41,7 @@ const scriptConfig = [
     meta: {
       input: "./meta/blank.ts",
       metaFile: "./packages/copy/meta.json",
-      output: "./dist/meta/copy.meta.js",
+      output: "./.output/meta/copy.meta.js",
     },
     script: {
       input: "./packages/copy/src/index.ts",
@@ -54,7 +54,7 @@ const scriptConfig = [
     meta: {
       input: "./meta/blank.ts",
       metaFile: "./packages/copy-currency/meta.json",
-      output: "./dist/meta/copy-currency.meta.js",
+      output: "./.output/meta/copy-currency.meta.js",
     },
     script: {
       input: "./packages/copy-currency/src/index.ts",
@@ -66,7 +66,7 @@ const scriptConfig = [
     meta: {
       input: "./meta/blank.ts",
       metaFile: "./packages/site-modify/meta.json",
-      output: "./dist/meta/site-modify.meta.js",
+      output: "./.output/meta/site-modify.meta.js",
     },
     script: {
       input: "./packages/site-modify/src/index.ts",

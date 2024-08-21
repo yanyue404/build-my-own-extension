@@ -10,7 +10,7 @@
 // @match       https://developer.mozilla.org/*
 // @match       *://*.feishu.cn/*
 // @match       *://link.juejin.cn/*
-// @match       https://cn.vuejs.org/*
+// @match       *://*.vuejs.org/*
 // @match       *://*.csdn.net/*
 // @include     /https://gitlab.(.*?){2}.com/((w|-)+/){2,3}/
 // @license     MIT License
@@ -89,7 +89,7 @@
         );
         if (!allText.includes("History")) {
           $(".tree-controls .d-block").prepend(
-            `<a class="gl-button btn btn-md btn-default shortcuts-find-file" rel="nofollow" href="${pathname}/-/commits/master/"><span class="gl-button-text">History</span></a>`
+            `<a class="gl-button btn btn-md btn-default shortcuts-find-file" rel="nofollow" href="${location.pathname}/-/commits/master/"><span class="gl-button-text">History</span></a>`
           );
         }
       });
@@ -293,164 +293,17 @@
   const __vue_script__ = script;
 
   /* template */
-  var __vue_render__ = function() {
-    var _vm = this;
-    var _h = _vm.$createElement;
-    var _c = _vm._self._c || _h;
-    return _c("section", { attrs: { id: "hero", "data-v-74e6ee14": "" } }, [
-      _c("img", {
-        attrs: {
-          id: "uwu",
-          alt: "Vue.js Kawaii Logo by @icarusgkx",
-          "data-v-74e6ee14": ""
-        }
-      }),
-      _vm._v(" "),
-      _c("h1", { staticClass: "tagline", attrs: { "data-v-74e6ee14": "" } }, [
-        _c(
-          "span",
-          {
-            staticClass: "accent",
-            attrs: { "data-v-74e6ee14": "" },
-            on: { click: _vm.clickFn }
-          },
-          [_vm._v("渐进式 JS 框架")]
-        ),
-        _vm._v(" "),
-        _c("br", { attrs: { "data-v-74e6ee14": "" } }),
-        _vm._v("\n    " + _vm._s(_vm.message) + "\n  ")
-      ]),
-      _vm._v(" "),
-      _c(
-        "p",
-        { staticClass: "description", attrs: { "data-v-74e6ee14": "" } },
-        [
-          _vm._v("\n    易学易用，性能出色，适用场景丰富的 Web 前端框架。\n    "),
-          _c(
-            "el-popover",
-            {
-              attrs: {
-                placement: "top-start",
-                title: "说明",
-                width: "200",
-                trigger: "hover",
-                content:
-                  "2024年8月4日， Github Star（https://github.com/vuejs/core） 46.1k。"
-              }
-            },
-            [
-              _c(
-                "el-button",
-                {
-                  attrs: {
-                    slot: "reference",
-                    type: "success",
-                    plain: "",
-                    round: ""
-                  },
-                  on: { click: _vm.toVue },
-                  slot: "reference"
-                },
-                [_vm._v("前往点赞")]
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("p", { staticClass: "actions", attrs: { "data-v-74e6ee14": "" } }, [
-        _c(
-          "a",
-          {
-            staticClass: "get-started",
-            attrs: { href: "/guide/introduction.html", "data-v-74e6ee14": "" }
-          },
-          [
-            _vm._v("\n      快速上手\n      "),
-            _c(
-              "svg",
-              {
-                staticClass: "icon",
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  width: "10",
-                  height: "10",
-                  viewBox: "0 0 24 24",
-                  "data-v-74e6ee14": ""
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z",
-                    "data-v-74e6ee14": ""
-                  }
-                })
-              ]
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "setup",
-            attrs: { href: "/guide/quick-start.html", "data-v-74e6ee14": "" }
-          },
-          [_vm._v("安装")]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "security",
-            attrs: {
-              href: "https://v2.cn.vuejs.org/eol/",
-              target: "_blank",
-              "data-v-74e6ee14": ""
-            }
-          },
-          [
-            _vm._v("\n      获取针对 Vue 2 的安全更新\n      "),
-            _c(
-              "svg",
-              {
-                staticClass: "icon",
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 512 512",
-                  "data-v-74e6ee14": ""
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z",
-                    "data-v-74e6ee14": ""
-                  }
-                })
-              ]
-            )
-          ]
-        )
-      ])
-    ])
-  };
+  var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{attrs:{"id":"hero"}},[_c('img',{attrs:{"id":"uwu","alt":"Vue.js Kawaii Logo by @icarusgkx"}}),_vm._v(" "),_c('h1',{staticClass:"tagline"},[_c('span',{staticClass:"accent",on:{"click":_vm.clickFn}},[_vm._v("渐进式 JS 框架")]),_vm._v(" "),_c('br'),_vm._v("\n    "+_vm._s(_vm.message)+"\n  ")]),_vm._v(" "),_c('p',{staticClass:"description"},[_vm._v("\n    易学易用，性能出色，适用场景丰富的 Web 前端框架。\n    "),_c('el-popover',{attrs:{"placement":"top-start","title":"说明","width":"200","trigger":"hover","content":"2024年8月4日， Github Star（https://github.com/vuejs/core） 46.1k。"}},[_c('el-button',{attrs:{"slot":"reference","type":"success","plain":"","round":""},on:{"click":_vm.toVue},slot:"reference"},[_vm._v("前往点赞")])],1)],1),_vm._v(" "),_c('p',{staticClass:"actions"},[_c('a',{staticClass:"get-started",attrs:{"href":"/guide/introduction.html"}},[_vm._v("\n      快速上手\n      "),_c('svg',{staticClass:"icon",attrs:{"xmlns":"http://www.w3.org/2000/svg","width":"10","height":"10","viewBox":"0 0 24 24"}},[_c('path',{attrs:{"d":"M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"}})])]),_vm._v(" "),_c('a',{staticClass:"setup",attrs:{"href":"/guide/quick-start.html"}},[_vm._v("安装")]),_vm._v(" "),_c('a',{staticClass:"security",attrs:{"href":"https://v2.cn.vuejs.org/eol/","target":"_blank"}},[_vm._v("\n      获取针对 Vue 2 的安全更新\n      "),_c('svg',{staticClass:"icon",attrs:{"xmlns":"http://www.w3.org/2000/svg","viewBox":"0 0 512 512"}},[_c('path',{attrs:{"d":"M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"}})])])])])};
   var __vue_staticRenderFns__ = [];
-  __vue_render__._withStripped = true;
 
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-202122a0_0", { source: "\n.description[data-v-202122a0] {\r\n  color: #32cd32;\n}\r\n", map: {"version":3,"sources":["F:\\yanyue404\\build-my-own-extension\\packages\\site-modify\\src\\modules\\vue\\App.vue"],"names":[],"mappings":";AA+EA;EACA,cAAA;AACA","file":"App.vue","sourcesContent":["<template>\r\n  <section id=\"hero\" data-v-74e6ee14=\"\">\r\n    <img id=\"uwu\" alt=\"Vue.js Kawaii Logo by @icarusgkx\" data-v-74e6ee14=\"\" />\r\n    <h1 class=\"tagline\" data-v-74e6ee14=\"\">\r\n      <span @click=\"clickFn\" class=\"accent\" data-v-74e6ee14=\"\">渐进式 JS 框架</span>\r\n      <br data-v-74e6ee14=\"\" />\r\n      {{ message }}\r\n    </h1>\r\n    <p class=\"description\" data-v-74e6ee14=\"\">\r\n      易学易用，性能出色，适用场景丰富的 Web 前端框架。\r\n      <el-popover\r\n        placement=\"top-start\"\r\n        title=\"说明\"\r\n        width=\"200\"\r\n        trigger=\"hover\"\r\n        content=\"2024年8月4日， Github Star（https://github.com/vuejs/core） 46.1k。\"\r\n      >\r\n        <el-button slot=\"reference\" type=\"success\" plain round @click=\"toVue\">前往点赞</el-button>\r\n      </el-popover>\r\n    </p>\r\n    <p class=\"actions\" data-v-74e6ee14=\"\">\r\n      <a class=\"get-started\" href=\"/guide/introduction.html\" data-v-74e6ee14=\"\">\r\n        快速上手\r\n        <svg\r\n          class=\"icon\"\r\n          xmlns=\"http://www.w3.org/2000/svg\"\r\n          width=\"10\"\r\n          height=\"10\"\r\n          viewBox=\"0 0 24 24\"\r\n          data-v-74e6ee14=\"\"\r\n        >\r\n          <path\r\n            d=\"M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z\"\r\n            data-v-74e6ee14=\"\"\r\n          ></path>\r\n        </svg>\r\n      </a>\r\n      <a class=\"setup\" href=\"/guide/quick-start.html\" data-v-74e6ee14=\"\">安装</a>\r\n      <a class=\"security\" href=\"https://v2.cn.vuejs.org/eol/\" target=\"_blank\" data-v-74e6ee14=\"\">\r\n        获取针对 Vue 2 的安全更新\r\n        <svg\r\n          class=\"icon\"\r\n          xmlns=\"http://www.w3.org/2000/svg\"\r\n          viewBox=\"0 0 512 512\"\r\n          data-v-74e6ee14=\"\"\r\n        >\r\n          <path\r\n            d=\"M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z\"\r\n            data-v-74e6ee14=\"\"\r\n          ></path>\r\n        </svg>\r\n      </a>\r\n    </p>\r\n  </section>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: \"App\",\r\n  props: [\"message\"],\r\n  data() {\r\n    return {\r\n      extendData: \"这是extend扩展的数据\",\r\n    };\r\n  },\r\n  methods: {\r\n    clickFn() {\r\n      this.$toast({\r\n        message: \"点击了标题\",\r\n        type: \"success\",\r\n      });\r\n    },\r\n    toVue() {\r\n      window.open(\"https://github.com/vuejs/core\", \"_blank\");\r\n    },\r\n  },\r\n};\r\n</script>\r\n<style scoped>\r\n.description {\r\n  color: #32cd32;\r\n}\r\n</style>\r\n"]}, media: undefined });
+      inject("data-v-1205eb28_0", { source: "#hero[data-v-1205eb28]{padding:96px 32px;text-align:center}.tagline[data-v-1205eb28]{font-size:76px;line-height:1.25;font-weight:900;letter-spacing:-1.5px;max-width:960px;margin:0 auto;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}.actions a[data-v-1205eb28]{font-size:16px;display:inline-block;background-color:#f1f1f1;padding:8px 18px;font-weight:500;border-radius:8px;transition:background-color .5s,color .5s}.actions .security[data-v-1205eb28]{background:linear-gradient(#f1f1f1 #f1f1f1) padding-box,linear-gradient(45deg,#42d392,#647eff) border-box;border:2px solid transparent}.actions .security[data-v-1205eb28]:hover{background:linear-gradient(#e5e5e5,#e5e5e5) padding-box,linear-gradient(45deg,#42d392,#647eff) border-box}.dark .actions .security[data-v-1205eb28]:hover{background:linear-gradient(#3a3a3a,#3a3a3a) padding-box,linear-gradient(45deg,#42d392,#647eff) border-box}.actions .security .icon[data-v-1205eb28]{width:12px;height:12px;margin-left:4px}.actions .get-started[data-v-1205eb28],.actions .setup[data-v-1205eb28]{margin-right:18px}.actions .icon[data-v-1205eb28]{display:inline;position:relative;top:-1px;margin-left:2px;fill:currentColor;transition:transform .2s}.actions .get-started[data-v-1205eb28]:hover{transition-duration:.2s}.actions .get-started:hover .icon[data-v-1205eb28]{transform:translate(2px)}.actions .get-started[data-v-1205eb28],.actions .security[data-v-1205eb28],.actions .setup[data-v-1205eb28]{color:#476582}.actions .get-started[data-v-1205eb28]:hover,.actions .security[data-v-1205eb28]:hover,.actions .setup[data-v-1205eb28]:hover{background-color:#e5e5e5;transition-duration:.2s}", map: undefined, media: undefined });
 
     };
     /* scoped */
-    const __vue_scope_id__ = "data-v-202122a0";
+    const __vue_scope_id__ = "data-v-1205eb28";
     /* module identifier */
     const __vue_module_identifier__ = undefined;
     /* functional template */
@@ -501,7 +354,7 @@
     regexp: /vuejs\.org/,
     init: function() {
       $(document).ready(function() {
-        loadCss("https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.14/theme-chalk/index.min.css");
+        loadCss("https://unpkg.com/element-ui@2.15.14/lib/theme-chalk/index.css");
         Vue__default['default'].use(ElementUI__default['default']);
         Vue__default['default'].prototype.$toast = function({
           message = "",
