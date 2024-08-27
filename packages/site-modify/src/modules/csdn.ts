@@ -37,6 +37,10 @@ const website: Website = {
             };
           });
         });
+        // 复制按钮屏蔽掉
+        $$(".signin").forEach(v => {
+          v.style.display = "none";
+        });
       })();
     });
   },
