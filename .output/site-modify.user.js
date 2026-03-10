@@ -6,7 +6,7 @@
 // @author      yanyue404
 // @match       https://chinadigitaltimes.net/*
 // @match       https://golden-axe.vercel.app/*
-// @match       https://yanyue404.github.io/*
+// @match       *://*.github.io/*
 // @match       https://developer.mozilla.org/*
 // @match       *://*.feishu.cn/*
 // @match       *://link.juejin.cn/*
@@ -73,7 +73,7 @@
   };
 
   const website$5 = {
-    regexp: /chinadigitaltimes|golden-axe|yanyue404\.github|developer\.mozilla|vuejs\.org/,
+    regexp: /chinadigitaltimes|golden-axe|github\.io|developer\.mozilla|vuejs\.org/,
     init: function() {
       const globol_font_style = `
     body, h1,h2,h3,h4, p, a{ font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji" !important

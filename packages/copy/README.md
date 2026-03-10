@@ -2,9 +2,10 @@
 
 解除网站不允许复制的限制，文本选中后点击复制按钮即可复制，主要用于 百度文库 道客巴巴 无忧考网 学习啦 蓬勃范文 思否社区 力扣 知乎 语雀 等等。
 
-某些网站例如某度文库、道客某某等都不允许用户选中文本进行复制，作为一个搞前端的，就感觉离谱，文本都下载到本地了，还不让我复制，于是为了更好的学(复)习(制)，实现了一个脚本去解决这些限制。  
+某些网站例如某度文库、道客某某等都不允许用户选中文本进行复制，作为一个搞前端的，就感觉离谱，文本都下载到本地了，还不让我复制，于是为了更好的学(复)习(制)，实现了一个脚本去解决这些限制。
 
 ## 描述
+
 首先来看一下效果图，依旧是以某度文库、道客某某为例展示效果，点击复制按钮即可成功复制。
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020062620515392.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNDEzNjcw,size_16,color_FFFFFF,t_70)
@@ -16,14 +17,17 @@ Github：[https://github.com/yanyue404/build-my-own-extension/tree/master/src/co
 脚本主要支持 百度文库 道客巴巴 无忧考网 学习啦 蓬勃范文 中文本的复制
 
 ## 实现
+
 在研究实现之前，可能需要知道下面的一些知识，后面的链接是我之前写过的一些博客：
-* 事件冒泡：[事件冒泡及阻止](https://github.com/WindrunnerMax/EveryDay/blob/master/JavaScript/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E5%8F%8A%E9%98%BB%E6%AD%A2.md)
-* 事件流模型：[JS事件流模型](https://github.com/WindrunnerMax/EveryDay/blob/master/JavaScript/JS%E4%BA%8B%E4%BB%B6%E6%B5%81%E6%A8%A1%E5%9E%8B.md)
-* 浏览器事件：[浏览器事件](https://github.com/WindrunnerMax/EveryDay/blob/master/Browser/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BA%8B%E4%BB%B6.md)
-* `ES6`相关语法：[ES6新特性](https://github.com/WindrunnerMax/EveryDay/blob/master/JavaScript/ES6%E6%96%B0%E7%89%B9%E6%80%A7.md)
-* `jQuery`相关使用、`CSS`的基本语法、正则表达式、浏览器调试等
+
+- 事件冒泡：[事件冒泡及阻止](https://github.com/WindrunnerMax/EveryDay/blob/master/JavaScript/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E5%8F%8A%E9%98%BB%E6%AD%A2.md)
+- 事件流模型：[JS 事件流模型](https://github.com/WindrunnerMax/EveryDay/blob/master/JavaScript/JS%E4%BA%8B%E4%BB%B6%E6%B5%81%E6%A8%A1%E5%9E%8B.md)
+- 浏览器事件：[浏览器事件](https://github.com/WindrunnerMax/EveryDay/blob/master/Browser/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BA%8B%E4%BB%B6.md)
+- `ES6`相关语法：[ES6 新特性](https://github.com/WindrunnerMax/EveryDay/blob/master/JavaScript/ES6%E6%96%B0%E7%89%B9%E6%80%A7.md)
+- `jQuery`相关使用、`CSS`的基本语法、正则表达式、浏览器调试等
 
 ### 某度文库
+
 在某度文库中直接右击检查元素的话，是能够直接看到文字的，可以直接在调试面板的`Elements`审查元素中复制，但是总是有些麻烦。如果在选中某度文库的东西会弹出他自行插入的复制按钮，无论是按`Ctrl+C`或者点击他的复制按钮都无效，除非开通一个`VIP`，本着白嫖的原则，且文本都下载到浏览器了还不让复制有点说不过去，于是首先研究一下他的`Event Listeners`。
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020062621305280.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNDEzNjcw,size_16,color_FFFFFF,t_70)
@@ -33,6 +37,7 @@ Github：[https://github.com/yanyue404/build-my-own-extension/tree/master/src/co
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020062621400978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNDEzNjcw,size_16,color_FFFFFF,t_70)
 
 ### 道客某某
+
 不得不说，这个真的是惊到我了，他的实现是将文本加密，然后解密文本，最后通过使用`Canvas`将文本绘制，拖动鼠标选中时其实只是通过事件监听动态的插入了一个淡蓝色的透明的`div`，看似是选中了，实际文本是并未选中的。
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200626214729628.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNDEzNjcw,size_16,color_FFFFFF,t_70)
@@ -42,6 +47,7 @@ Github：[https://github.com/yanyue404/build-my-own-extension/tree/master/src/co
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200626220032743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNDEzNjcw,size_16,color_FFFFFF,t_70)
 
 ### 其他
+
 对于这一部分基本上都是通过监听一个`oncopy`事件去拦截复制操作，对于`DOM0`级模型直接将`oncopy`事件的处理函数指向一个空函数即可，对于`DOM2`级模型，前文提到无法在脚本中直接获取一个元素绑定的所有事件，通过观察这些网站的`Event Listeners`可以发现其绑定的`oncopy`事件都是绑定在`document`上的，而且都是冒泡模型，那么只需要阻止事件向上冒泡就能规避这些网站的`oncopy`事件的触发，实现方案就是在`body`上定义`oncopy`事件为一个空函数并阻止其向上冒泡。
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200626220824245.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNDEzNjcw,size_16,color_FFFFFF,t_70)

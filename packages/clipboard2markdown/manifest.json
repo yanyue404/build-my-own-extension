@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Clipboard to Markdown",
+  "description": "Convert rich text or HTML from clipboard into Markdown locally in your browser.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Clipboard to Markdown",
+    "default_popup": "index.html"
+  },
+  "options_page": "index.html"
+}

@@ -6,7 +6,7 @@
 // @author      yanyue404
 // @match       https://chinadigitaltimes.net/*
 // @match       https://golden-axe.vercel.app/*
-// @match       https://yanyue404.github.io/*
+// @match       *://*.github.io/*
 // @match       https://developer.mozilla.org/*
 // @match       *://*.feishu.cn/*
 // @match       *://link.juejin.cn/*

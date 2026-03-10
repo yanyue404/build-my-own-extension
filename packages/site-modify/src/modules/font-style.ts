@@ -1,7 +1,7 @@
 import type { Website } from "../websites";
 
 const website: Website = {
-  regexp: /chinadigitaltimes|golden-axe|yanyue404\.github|developer\.mozilla|vuejs\.org/,
+  regexp: /chinadigitaltimes|golden-axe|github\.io|developer\.mozilla|vuejs\.org/,
   init: function () {
     // 电脑上装了一些不想用来显示文字的字体，故修改字体样式
     const globol_font_style = `
