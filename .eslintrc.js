@@ -25,7 +25,7 @@ module.exports = {
       extends: ["plugin:@typescript-eslint/recommended", "plugin:react-hooks/recommended"],
     },
   ],
-  ignorePatterns: ["node_modules", "build", "dist", "coverage", "public"],
+  ignorePatterns: ["node_modules", "build", "dist", ".output", "coverage", "public"],
   rules: {
     // 分号
     "semi": "error",

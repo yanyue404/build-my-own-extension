@@ -1,0 +1,13 @@
+{
+  "name": "GitHub TOC 导航",
+  "namespace": "https://github.com/yanyue404/build-my-own-extension",
+  "version": "1.0.0",
+  "description": "为 GitHub 的 README / Issue / Wiki / Discussion 生成可嵌套的标题目录，支持滚动高亮与拖拽。移植自 GayHub TOC。",
+  "author": "yanyue404",
+  "match": ["https://github.com/*"],
+  "supportURL": "https://github.com/yanyue404/build-my-own-extension/issues",
+  "license": "MIT License",
+  "installURL": "https://github.com/yanyue404/build-my-own-extension",
+  "run-at": "document-idle",
+  "grant": "none"
+}

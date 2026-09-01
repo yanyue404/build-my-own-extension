@@ -16,7 +16,8 @@ coverage
 
 # production
 build
-dist
+dist/extensions
+.output
 
 # misc
 .DS_Store

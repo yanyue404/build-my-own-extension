@@ -1,0 +1,11 @@
+{
+  "name": "clipboard2markdown-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser extension package for clipboard2markdown.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "pnpm run build",
+    "build": "node ../../tooling/copy-static-extension.js clipboard2markdown"
+  }
+}

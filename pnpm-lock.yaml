@@ -80,27 +80,16 @@ importers:
         specifier: 2.6.12
         version: 2.6.12
 
-  packages/captcha: {}
+  extensions/clipboard2markdown: {}
 
-  packages/completion: {}
-
-  packages/copy: {}
-
-  packages/copy-currency: {}
-
-  packages/expansion: {}
-
-  packages/force-copy:
+  extensions/force-copy:
     dependencies:
       '@arco-design/web-react':
         specifier: 2.50.0
         version: 2.50.0(@types/react@17.0.2)(react-dom@17.0.2)(react@17.0.2)
-      copy:
-        specifier: 'workspace: *'
-        version: link:../copy
-      copy-currency:
-        specifier: 'workspace: *'
-        version: link:../copy-currency
+      copy-runtime:
+        specifier: workspace:*
+        version: link:../../shared/copy-runtime
       laser-utils:
         specifier: 0.0.5-beta.0
         version: 0.0.5-beta.0
@@ -142,9 +131,21 @@ importers:
         specifier: 10.9.1
         version: 10.9.1(@types/node@20.8.0)(typescript@4.6.2)
 
-  packages/site-director: {}
+  scripts/copy:
+    dependencies:
+      copy-runtime:
+        specifier: workspace:*
+        version: link:../../shared/copy-runtime
 
-  packages/site-modify: {}
+  scripts/copy-currency:
+    dependencies:
+      copy-runtime:
+        specifier: workspace:*
+        version: link:../../shared/copy-runtime
+
+  scripts/site-modify: {}
+
+  shared/copy-runtime: {}
 
 packages:
 
@@ -1373,6 +1374,7 @@ packages:
 
   /acorn-import-assertions@1.9.0(acorn@8.11.3):
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
+    deprecated: package has been renamed to acorn-import-attributes
     peerDependencies:
       acorn: ^8
     dependencies:
@@ -4437,6 +4439,7 @@ packages:
 
   /lodash.template@4.5.0:
     resolution: {integrity: sha512-84vYFxIkmidUiFxidA/KjjH9pAycqW+h980j7Fuz5qxRtO9pgB7MDFTdys1N7A5mcucRiDyEq4fusljItR1T/A==}
+    deprecated: This package is deprecated. Use https://socket.dev/npm/package/eta instead.
     dependencies:
       lodash._reinterpolate: 3.0.0
       lodash.templatesettings: 4.2.0
@@ -5742,6 +5745,7 @@ packages:
 
   /rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
     dependencies:
       glob: 7.2.3

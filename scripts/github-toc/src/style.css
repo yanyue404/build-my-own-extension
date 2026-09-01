@@ -1,0 +1,192 @@
+.github-toc-wrap {
+  position: fixed;
+  top: 10%;
+  right: 3%;
+  z-index: 999;
+  background-color: #fff;
+  width: 300px;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
+  border-radius: 5px;
+  display: block;
+  transition: right 0.3s ease-out;
+}
+
+.github-toc-wrap[data-open="false"] {
+  right: -280px;
+}
+
+.github-toc-btn {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid rgba(27, 31, 35, 0.2);
+  border-radius: 3px;
+  background-color: #eff3f6;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg height='16' width='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%234183c4' d='M7.5 8L2.5 13l-1.5-1.5 3.75-3.5L1 4.5l1.5-1.5 5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.github-toc-wrap[data-open="false"] .github-toc-btn {
+  left: -36px;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg height='16' width='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 3l1.5 1.5-3.75 3.5 3.75 3.5-1.5 1.5L0.5 8l5-5z'/%3E%3C/svg%3E");
+}
+
+.github-toc-header {
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 40px;
+  border-bottom: 1px solid #d3d3d3;
+  text-align: center;
+  cursor: move;
+  user-select: none;
+}
+
+.github-toc-header a {
+  color: green;
+  margin-left: 8px;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: normal;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.github-toc-header a:hover {
+  opacity: 1;
+}
+
+.github-toc-list {
+  margin: 0;
+  padding: 1em;
+  max-height: 550px;
+  overflow: auto;
+  list-style: none;
+}
+
+.github-toc-list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.github-toc-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.github-toc-item {
+  list-style: none;
+  line-height: 22px;
+  max-height: 22px;
+  overflow: hidden;
+  font-size: 12px;
+  transition: max-height 0.4s ease-out;
+}
+
+.github-toc-list > .github-toc-item {
+  line-height: 26px;
+  max-height: 26px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.github-toc-item.is-open,
+.github-toc-item:hover {
+  max-height: 800px;
+}
+
+.github-toc-link {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 1em;
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.github-toc-link:hover,
+.github-toc-link.is-active {
+  color: #009a61;
+  background-color: #f3f3f3;
+  border-left: 2px solid #563d7c;
+  padding-left: calc(1em - 2px);
+}
+
+.github-toc-item[data-level="1"] > .github-toc-link.is-active {
+  border-left-width: 3px;
+  padding-left: calc(1em - 3px);
+}
+
+.github-toc-item[data-level="2"] > .github-toc-link {
+  padding-left: 2.5em;
+}
+
+.github-toc-item[data-level="2"] > .github-toc-link:hover,
+.github-toc-item[data-level="2"] > .github-toc-link.is-active {
+  padding-left: calc(2.5em - 2px);
+}
+
+.github-toc-item[data-level="3"] > .github-toc-link {
+  padding-left: 3.5em;
+}
+
+.github-toc-item[data-level="3"] > .github-toc-link:hover,
+.github-toc-item[data-level="3"] > .github-toc-link.is-active {
+  padding-left: calc(3.5em - 2px);
+}
+
+.github-toc-item[data-level="4"] > .github-toc-link {
+  padding-left: 4.5em;
+}
+
+.github-toc-item[data-level="4"] > .github-toc-link:hover,
+.github-toc-item[data-level="4"] > .github-toc-link.is-active {
+  padding-left: calc(4.5em - 2px);
+}
+
+.github-toc-item[data-level="5"] > .github-toc-link {
+  padding-left: 5.5em;
+}
+
+.github-toc-item[data-level="5"] > .github-toc-link:hover,
+.github-toc-item[data-level="5"] > .github-toc-link.is-active {
+  padding-left: calc(5.5em - 2px);
+}
+
+.github-toc-item[data-level="6"] > .github-toc-link {
+  padding-left: 6.5em;
+}
+
+.github-toc-item[data-level="6"] > .github-toc-link:hover,
+.github-toc-item[data-level="6"] > .github-toc-link.is-active {
+  padding-left: calc(6.5em - 2px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .github-toc-wrap {
+    background-color: #161b22;
+    border-color: #30363d;
+  }
+
+  .github-toc-header {
+    color: #c9d1d9;
+    border-bottom-color: #30363d;
+  }
+
+  .github-toc-link:hover,
+  .github-toc-link.is-active {
+    background-color: #21262d;
+  }
+}

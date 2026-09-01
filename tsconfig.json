@@ -16,11 +16,14 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "newLine": "lf",
+    "baseUrl": ".",
     "paths": {
-      "copy/*": ["./packages/copy/*"],
-      "copy-currency/*": ["./packages/copy-currency/*"]
+      "copy-runtime": ["./shared/copy-runtime/src/index.ts"],
+      "copy-runtime/*": ["./shared/copy-runtime/src/*"],
+      "copy/*": ["./scripts/copy/*"],
+      "copy-currency/*": ["./scripts/copy-currency/*"]
     }
   },
-  "include": ["packages/*/src"],
-  "exclude": ["node_modules"]
+  "include": ["scripts/*/src", "extensions/*/src", "shared/*/src"],
+  "exclude": ["node_modules", "dist"]
 }
